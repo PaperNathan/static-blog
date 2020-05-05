@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-outer {
+  margin-top: 20px;
+  border-radius: 25px;
+
+  background-color: #222229;
+
+  border: 2px solid black;
+  padding: 30px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-inner {
+  height: 600px;
+  width: 320px;
+  overflow-y: scroll;
+
+  background-color: azure;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.article-container {
+  width: 320px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.card {
+  height: 160px;
+  width: 300px;
+  
+  margin: 0 0 20px;
+  
+  background: azure;
+  
+  box-shadow: 0px 6px 20px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover > .picture {
+	width: 120px;
+	transition: width .2s;
+}
+
+.picture {
+	height: 160px;
+  width: 100px;
+  
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	
+	transition: width .2s;
+}
+
+
+
+.content {
+	flex: 1;
+	height: 160px;
+	
+	padding: 0 10px;
+}
+
+.title {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+/* Navbar */
+.navbar {
+  height: 50px;
+  width: 100%;
+
   color: white;
+
+  background-color: salmon;
+
+  display: flex;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hamburger {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger .top-ham {
+  margin-bottom: 5px;
+}
+
+.hamburger .top-ham,
+.hamburger .bot-ham {
+  height: 5px;
+  width: 25px;
+
+  border-radius: 20%;
+  background-color: white;
 }

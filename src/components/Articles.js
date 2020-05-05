@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Article from './Article';
+
 import reading from '../articles/articles.json';
 
 class Articles extends React.Component {
@@ -8,19 +10,15 @@ class Articles extends React.Component {
         let thumbnails = [];
         for (let i=0; i<reading.length; i++) {
             thumbnails.push(
-                    <div>
-                        <h1>{reading[i].title}</h1>
-                        <p>{reading[i].author}</p>
-                        <p>{reading[i].content}</p>
-                    </div>
-                )
+                <Article content={reading[i]} image="https://picsum.photos/160" />
+            )
         }
         return thumbnails;
     }
 
     render() {
         return(
-            <div>
+            <div className="article-container">
                 {this.loadArticles()}
             </div>
         )

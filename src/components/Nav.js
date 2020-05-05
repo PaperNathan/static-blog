@@ -6,8 +6,11 @@ class Nav extends React.Component {
         return(
             <nav>
                 <div className="navbar">
-                    <a href='' className="nav-item">Home</a>
-                    <a href='' className="nav-item">Articles</a>
+                    <div className="logo">Test Blog</div>
+                    <div className="hamburger">
+                        <div className='top-ham'></div>
+                        <div className='bot-ham'></div>
+                    </div>
                 </div>
             </nav>
         )
